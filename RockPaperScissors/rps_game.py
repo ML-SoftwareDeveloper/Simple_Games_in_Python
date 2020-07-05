@@ -18,10 +18,10 @@ def decide(player_choice,computer_choice):
         return 'Unlucky! Computer won :('
 
 def rps():
-    check_tie = False #Flag
+    check_tie = True #Flag
 
     # Play until its not a tie
-    while not check_tie:
+    while check_tie:
         # Get players choise
         player_choice = input('Choose R(rock) or P(paper) or S(scissor): ') 
         print('Your choise:',player_choice)
@@ -36,7 +36,7 @@ def rps():
         if decision=='tie':
             print('Its a tie :| Try again !')
         else:
-            check_tie = True
+            check_tie = False
     print(decision)
     
     # Play again?
